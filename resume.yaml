@@ -1,0 +1,341 @@
+contact:
+  name: "Quentin Vandermerwe"
+  email: quentin@vandermerwe.com
+  phone: 604.551.5510
+title: Senior Product Manager
+address:
+  street: 1104-39 Sixth St
+  city: New Westminster
+  province: British Columbia
+  code: V3L 0B3
+  country: Canada
+contact:
+summary: >-
+  Experienced Senior Product Manager, IT and Software Architect, Project
+  Manager and Product Strategist with expertise in product management,
+  hyper-scale cloud architecture, data center architecture, enterprise
+  architecture, storage, embedded software development and people
+  management.
+accomplishments:
+  item:
+    - title: Product management leadership
+      content: >-
+        Guided the product development at a startup, growing the customer
+        base from one enterprise customer to over 100, leading to
+        acquisition by a Fortune 500 company (NetApp).
+    - title: Go-to-market
+      content: >-
+        Drove the completion of the Digital Feedback Loop and Over the Air
+        components of the Wind River Studio SaaS product. Demonstrated and
+        evangelized the product, leading to the signing of
+        multi-million-dollar contracts with initial customers.
+    - title: Marketing
+      content: >-
+        Launched a successful try-before-buy campaign for the Bravura Safe
+        security product, leading to a 100% increase in customer acquisition
+        rate.
+    - title: Product development
+      content: >-
+        Managed the development and launch of enterprise Managed DevSecOps
+        and Object Storage offerings at a managed service provider.
+job:
+  - date:
+      start:
+        year: '2023'
+        month: '01'
+      end:
+        year: '2023'
+        month: '12'
+    employer: Wind River Systems
+    position: Product Line Manager - DevSecOps
+    location: Ottawa-Remote
+    description: >-
+      Wind River is a global provider of ultra-high reliability embedded
+      operating systems and related development tools. Wind River has been a
+      technology pioneer, from having the first real-time operating system
+      on Mars to playing a key role in the world’s first successful 5G data
+      session. Wind River technology is found in billions of products
+      worldwide.
+    responsibilities:
+      responsibility:
+        - >-
+          Owner of product management for the Digital Lifecycle Management
+          (DLM) and Over the Air (OTA) update components of the Wind River
+          Studio development platform.
+        - >-
+          Created the DFL and OTA product development roadmap to position
+          Wind River Studio as a world-class development platform.
+        - >-
+          Defined market- and product requirements based on competitive
+          analysis and business objectives.
+        - >-
+          Oversaw deployment of the DFL and OTA components at the first
+          major Studio customer, a household word in the automotive
+          industry.
+  - date:
+      start:
+        year: '2022'
+        month: '07'
+      end:
+        year: '2023'
+        month: '01'
+    employer: Bravura Security (formerly Hitachi ID Systems)
+    description: >-
+      Bravura Security is a global provider of Identity and access
+      management (IAM) solutions, protecting the digital assets of many
+      Fortune 500 companies
+    position: Senior Product Manager
+    location: Calgary-Remote
+    responsibilities:
+      responsibility:
+        - Owner of product management for the Bravura Safe product.
+        - >-
+          Groomed the Bravura Safe feature backlog and product development
+          roadmap to adapt to changing priorities and market conditions.
+        - >-
+          Defined market- and product requirements based on competitive
+          analysis and business objectives.
+        - >-
+          Introduced a try-before-you-buy program to allow potential
+          customers to experience the benefits of Bravura Safe at no risk.
+        - >-
+          Conducted win-loss analysis and created tactical pricing
+          strategies to gain competitive advantage and market share.
+  - date:
+      start:
+        year: '2015'
+        month: '01'
+      end:
+        year: '2022'
+        month: '04'
+    employer: Aptum (formerly Cogeco Peer 1)
+    position: Principal Cloud Architect
+    location: Toronto - remote
+    description: >-
+      Aptum is a global provider of managed hosting services, with more than
+      600 employees in North America and EMEA, and annual revenue exceeding
+      $200M.
+    responsibilities:
+      responsibility:
+        - >-
+          Lead the product planning, specification, and high-level design of
+          the Aptum regional hybrid cloud infrastructure project. This
+          initiative added a world-class self-service regional cloud
+          platform and hybrid cloud management portal to Aptum's product
+          portfolio.
+        - >-
+          Lead the DevOps planning and implementation of Aptum's Azure
+          Expert MSP certification effort.
+        - >-
+          Successfully managed the development of, and delivered, Aptum's
+          Managed DevOps product. Defined the business case, product
+          development plan and high-level architecture. Directed the
+          development process and managed integration with Aptum business
+          systems.
+        - >-
+          Created Aptum's Digital Transformation plan as part of a Product
+          Innovation team. Implemented targeted process automation to
+          streamline operations and service delivery.
+        - >-
+          Analyzed customer- and enterprise storage requirements and
+          developed a cost-effective unified storage strategy across lines
+          of all business and in all data centres. Replaced fixed Fiber
+          Channel infrastructure with an IP-connected data lake. Realized
+          annual cost savings of over $200K and opened up new revenue
+          streams.
+        - >-
+          Created a multi-year Compute and Storage technology roadmap and
+          instituted a metrics-based technology proof-of-concept and
+          evaluation program.
+        - >-
+          Successfully launched a new revenue-generating high-performance
+          storage service. This project entailed architectural design,
+          vendor- and product evaluation, business plan creation, budgeting,
+          service design, project management and deployment coordination.
+        - >-
+          Established processes and documentation standards for all
+          activities within the Architecture team.
+  - date:
+      start:
+        year: '2012'
+        month: '07'
+      end:
+        year: ''
+        month: ''
+    employer: AYB Technologies
+    position: Founder and Principal Consultant
+    location: New Westminster
+    description: ''
+    responsibilities:
+      responsibility:
+        - >-
+          Guided technology start-ups to establish sound agile product
+          development and product management frameworks and processes.
+        - subresponsibility:
+            - Requirements and change management.
+            - 'Agile/Scrum, test-driven development.'
+            - Development and product documentation.
+          __text: >-
+            Designed and documented lightweight, scalable, repeatable
+            processes for all aspects of the development process, including:
+  - date:
+      start:
+        year: '2005'
+        month: '04'
+      end:
+        year: '2012'
+        month: '07'
+    employer: NetApp / Bycast
+    position: Senior Product Manager
+    location: Vancouver
+    description: ''
+    responsibilities:
+      responsibility:
+        - Owner of product management for the NetApp StorageGRID product.
+        - >-
+          Guided a team of product managers and technical marketing
+          engineers to transition the StorageGRID product into the NetApp
+          portfolio, and to develop integrated product offerings.
+          Successfully completed portfolio integration, doubling sales each
+          year since the acquisition of Bycast by NetApp.
+        - >-
+          Maintained and continuously updated the StorageGRID product
+          development roadmap to adapt to changing priorities and market
+          conditions.
+        - >-
+          Defined market- and product requirements based on competitive
+          analysis and business objectives.
+        - >-
+          Responsible for product pricing and competitive analysis. Executed
+          on tactical pricing strategies to gain competitive advantage and
+          market share. Conducted win-loss analysis.
+        - >-
+          Developed and maintained relationships with sales and account
+          teams. Acted as product champion and evangelist, promoting product
+          knowledge among the worldwide sales force.
+        - >-
+          Developed and managed relationships with OEM partners, including
+          IBM, HP, Dell, and Iron Mountain. Initiated and fostered partner
+          relationships. Actively managed partner relationships to identify
+          product development opportunities and monitor KPIs.
+        - >-
+          Developed and managed relationships with Medical Imaging system
+          providers, including Siemens, GE, McKesson, Cerner, Fuji, and
+          Philips. Coordinated API and systems integration projects. Managed
+          partner relationships to identify joint sales opportunities.
+        - >-
+          Provided high-level product marketing input for product launches
+          and other collateral. Commissioned and reviewed marketing- and
+          presentation material.
+        - >-
+          Guided the technical development of the StorageGRID product at
+          Bycast, growing the customer base from one to over 100.
+  - employer: 'MDSI, General Hydrogen, Glenayre, Reutech Systems'
+    position: 'Development Manager, Architect, Project Manager, Technical Expert'
+    responsibilities:
+      responsibility:
+        subresponsibility:
+          - >-
+            Led a team of 25 software professionals to successfully develop
+            a new telecommunications platform.
+          - >-
+            Architected several large telecommunications and embedded
+            systems software projects.
+          - >-
+            Successfully managed cross-functional projects from concept to
+            delivery.
+          - >-
+            Designed and implemented ultra-high precision digital servo
+            control systems.
+          - >-
+            Designed embedded hardware for control systems, test platforms
+            and user interfaces.
+        __text: >-
+          Technical and management roles with increasing responsibility at
+          technology companies specializing in embedded- and wireless
+          systems. Highlights include:
+skillset:
+  skill:
+    - category: Product Management
+      details:
+        item:
+          - Creating and executing product strategies
+          - >-
+            Establishing product vision, defining market requirements, and
+            executing on product requirements.
+          - Pricing and product positioning.
+          - Defining business cases.
+          - Agile Product Development.
+    - category: Development Team Management
+      details:
+        item:
+          - >-
+            Supervising and managing highly technical personnel (Engineers
+            and Software Developers).
+          - >-
+            Team building, mentoring, training, goal setting, and
+            performance evaluation.
+          - 'Recruiting, interviewing, and hiring.'
+    - category: Project Management
+      details:
+        item:
+          - >-
+            Project planning and tracking. Estimation and resource
+            management.
+          - Risk Management and contingency planning.
+          - Subcontractor management.
+          - Negotiation with customers and suppliers.
+    - category: Software Architecture and Technology
+      details:
+        item:
+          - 'Virtualization, including VMware, Hyper-V, and KVM'
+          - >-
+            Cloud infrastructure and customer solution implementation on
+            Azure, GCP, and AWS
+          - >-
+            Containerized application architecture with Kubernetes and
+            Docker
+          - >-
+            Automated infrastructure deployment with Ansible, Salt,
+            Metalsoft, and similar frameworks
+          - 'Large scale, distributed systems design.'
+          - Fault-tolerant and highly available systems.
+          - Medical imaging systems.
+          - Security
+          - Identity and Access Management
+          - Storage Systems.
+          - 'Software development in C++, C, Java, and Python.'
+          - 'Writing functional, interface, and architecture specifications.'
+    - category: Development Process
+      details:
+        item:
+          - >-
+            Implementing and managing agile development frameworks (Scrum
+            and Kanban). Proficient as scrum master and product owner.
+          - 'Software requirements, configuration, and change management.'
+    - category: Other
+      details:
+        item:
+          - Mathematical modeling of electromechanical systems.
+          - Control Systems Design
+education:
+  degree:
+    title: B.Eng (Electronics and Computer Engineering)
+    date:
+      start:
+        year: '1983'
+        month: '01'
+      end:
+        year: '1986'
+        month: '12'
+    institution: 'University of Pretoria, Pretoria, South Africa'
+certifications:
+  certification:
+    - institution: Microsoft
+      description: Microsoft Azure Administrator Associate
+    - institution: ITIL Foundation
+      description: Certificate in IT Service Management
+    - institution: Pragmatic Institute
+      description: Principles of Pragmatic Marketing
+    - institution: Stanford University
+      description: Machine Learning by Andrew Ng
