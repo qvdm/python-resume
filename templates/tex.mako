@@ -1,138 +1,121 @@
-\documentclass[10pt,letterpaper]{article}
+<% 
+  name = contact["name"]
+  fl = name.split(' ', 1)
+  first, last = fl
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[margin={2.0cm,1.5cm}]{geometry}
-\usepackage{changepage}
-\usepackage{libertine}
-\usepackage{microtype}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{xcolor}
-\usepackage{relsize}
-\usepackage{hyperref}
-
-\titleformat*{\section}{\Large\bfseries\scshape}
-\definecolor{myblue}{rgb}{0.18,0.31,0.65}
-\hypersetup{colorlinks=true,urlcolor=myblue}
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlist{nolistsep}
-
-\makeatletter
-\newcommand\HUGE{\@setfontsize\Huge{30}{36}}
-\makeatother
-
-\newcommand{\indentleft}{1em}
-\newcommand{\indentright}{0em}
-\newcommand{\indenthang}{1.5em}
-\newcommand{\interlist}{0.5em}
-\newcommand{\postsubhead}{-0.7em}
-\newcommand{\postsection}{-1em}
-\newcommand{\hangingindent}{%
-  \leftskip=\indentleft
-  \hangindent=\indenthang
-}
-
-\begin{document}
-\raggedright
-
-  \begin{center}
-    {\HUGE\textbf{${contact["name"]}}}
-
-<% site = contact["site"] %>
-<% github = contact["github"] %>
+%>
 <% email = contact["email"] %>
 <% phone = contact["phone"] %>
-    \href{tel:${phone}}{${phone}}
-    \textbullet\
-    \href{http://${github}}{${github}}
-    \textbullet\
-    \href{mailto:${email}}{${email}}
-% if address and cell and contact["address"] and contact["cell"] : 
-    \\
-    \vspace{-0.5ex}
-    ${contact["address"]}
-    \textbullet\
-    ${contact["cell"]}
-% endif
-% if citizenship and contact["citizenship"] :
-    \\
-    \textbf{${contact["citizenship"]}}
-% endif 
-    \hrule
-  \end{center}
+<% title = contact["title"] %>
+<% address = contact["address"] %>
 
-  \section*{Experience}
-    \vspace{\postsubhead}
-    \begin{adjustwidth}{\indentleft}{\indentright}
-% for entry in work: 
-      \textbf{${entry["title"]}}
-      \hfill
-      \textbf{${entry["location"]}}\\
-      \emph{${entry["employer"]}}
-      \hfill
-      \emph{${entry["date"]}}
-% if notes and entry["notes"]:
-      \\ ${entry["notes"]} \\
-% endif
-% if description and entry["description"]: 
-      \begin{itemize}
-% for item in entry["description"]: 
-        \item ${item}
-% endfor 
-      \end{itemize>
-% endif 
-% if loop.index != len(work): 
-      \vspace{\interlist}
+\documentclass[12pt,letterpaper,sans]{moderncv}
+\moderncvstyle[norules]{banking}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+\usepackage{import}
+\usepackage{textcomp}
 
-% endif 
-% endfor 
-    \end{adjustwidth}
-    \vspace{\postsection}
-    \clearpage%
+\makeatletter
+\@initializecommand{\makehead}{
+  \setlength{\makeheaddetailswidth}{0.8\textwidth}
+  \hfil
+  \parbox{\makeheaddetailswidth}{
+    \centering
+    \namestyle{\@firstname~\@lastname}\linebreak
+    \vskip-1.5ex
+    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{\@title}}
+    \if@details{
+      \\
+      \addressfont\color{color2}
+      \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomakeheaddetails{\addresssymbol\@addressstreet}
+        \ifthenelse{\equal{\@addresscity}{}}{}{\addtomakeheaddetails[~--~]{\@addresscity}}
+        \ifthenelse{\equal{\@addresscountry}{}}{}{\addtomakeheaddetails[~--~]{\@addresscountry}}
+        \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\}
+      \collectionloop{phones}{
+        \addtomakeheaddetails{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}
+      \ifthenelse{\isundefined{\@email}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@email}}}
+      \ifthenelse{\isundefined{\@homepage}}{}		{\addtomakeheaddetails{\homepagesymbol\httpslink{\@homepage}}}
+      \collectionloop{socials}{
+        \addtomakeheaddetails{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}
+      \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomakeheaddetails{\@extrainfo}}
+      \flushmakeheaddetails}\fi}\\[2.5em]}
+\par      
 
-  \section*{Publications}
-    \vspace{\postsubhead}
-% for entry in publications: 
-      \hangingindent
-      ${entry["authors"]} (${entry["date"]}).
-      ${entry["title"]},
-      \emph{${entry["in"]}}.
-% if loop.index != len(publications): 
-      \vspace{\interlist}
+\makeatother
 
-% endif 
-% endfor 
-    \vspace{\postsection}
+\name{${first}}{${last}}
+\email{${email}}
+\phone[mobile]{${phone}}
+\title{${title}}
+\address{${address}}{}{}
 
-  \section*{Technical Skills}
-    \vspace{\postsubhead}
-    \begin{adjustwidth}{\indentleft}{\indentright}
-      \begin{itemize}
-% for entry in skills: 
-        \item ${entry}
-% endfor 
-      \end{itemize}
-    \end{adjustwidth}
-    \vspace{\postsection}
+\begin{document}
+\makecvtitle
 
-  \section*{Education}
-    \vspace{\postsubhead}
-    \begin{adjustwidth}{\indentleft}{\indentright}
+\small{${summary}}
 
 
-% for entry in education: 
+\section{Accomplishments and Achievements}
+\vspace{6pt}
+\begin{itemize}
+% for entry in accomplishments: 
+\vspace{6pt}
+\item \textbf{${entry['title']}:} ${entry['content']}
+% endfor
+\end{itemize}
 
-  ${entry["level"]}
-  ${entry["institution"]}, ${entry["location"]}
-  ${entry["date"]}
-% if entry["notes"]: 
-% for item in entry["notes"]: 
-      ${item}
-% endfor 
-% endif 
-% endfor  
-\end{adjustwidth}
+\vspace{24pt}
+
+\section{Professional Experience}
+\vspace{6pt}
+\begin{itemize}
+% for entry in experience: 
+\item{\cventry{${entry['date']}}{${entry['position']}}{${entry['employer']}}{${entry['location']}}{}{}}
+${entry['description']}
+\par
+\begin{itemize}
+% for resp in entry['responsibilities']:
+\vspace{6pt}
+\item ${resp}
+\par
+% endfor
+\end{itemize}
+\vspace{24pt}
+% endfor
+\end{itemize}
+
+
+\section{Skills}
+\vspace{6pt}
+\begin{itemize}
+% for entry in skills:
+\item \textbf{${entry['category']}}
+\begin{itemize}
+% for skill in entry['list']:
+\item ${skill}
+% endfor
+\end{itemize}
+%endfor
+\end{itemize}
+
+\section{Education}
+\vspace{5pt}
+\begin{itemize}
+% for entry in degrees:
+\item{\cventry{}{${entry['title']}}{${entry['institution']}}{}{}{}}
+% endfor
+\end{itemize}
+
+\section{Certifications}
+\vspace{5pt}
+\begin{itemize}
+% for entry in certifications:
+\item{\cventry{}{${entry['description']}}{${entry['institution']}}{}{}{}}
+% endfor
+\end{itemize}
 
 \end{document}
+
+
