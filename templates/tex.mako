@@ -25,7 +25,7 @@
     \centering
     \namestyle{\@firstname~\@lastname}\linebreak
     \vskip-1.5ex
-    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{\@title}}
+    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{\@title}}\linebreak
     \if@details{
       \\
       \addressfont\color{color2}
@@ -72,8 +72,19 @@
 \vspace{6pt}
 \begin{itemize}
 % for entry in experience: 
-\item{\cventry{${entry['date']}}{${entry['position']}}{${entry['employer']}}{${entry['location']}}{}{}}
-${entry['description']}
+<%
+  date='' 
+  location=''
+  if 'date' in entry.keys() : 
+    date=entry['date']
+  if 'location' in entry.keys() : 
+    location=entry['location']
+%>
+
+\item{\cventry{${date}}{${entry['position']}}{${entry['employer']}}{${location}}{}{}}
+% if 'profile' in entry.keys() : 
+${entry['profile']}
+% endif
 \par
 \begin{itemize}
 % for resp in entry['responsibilities']:
@@ -112,9 +123,11 @@ ${entry['description']}
 \vspace{5pt}
 \begin{itemize}
 % for entry in certifications:
-\item{\cventry{}{${entry['description']}}{${entry['institution']}}{}{}{}}
+\item{\cventry{}{${entry['title']}}{${entry['institution']}}{}{}{}}
 % endfor
 \end{itemize}
+
+
 
 \end{document}
 
