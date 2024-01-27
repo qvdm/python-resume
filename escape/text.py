@@ -16,9 +16,6 @@ def escape(input_data=''):
         input_data = re.sub(r'\[%\]', '%', input_data)             # Percent sign
         input_data = re.sub(r'\[---\]', '---', input_data)         # Em dash
         input_data = re.sub(r'\[--\]', '--', input_data)           # En dash
-        # Link escaping not needed for txt resume
-        input_data = re.sub(r'\[CPP\]', 'C++', input_data)         # C++
-        input_data = re.sub(r'\[MH Yee\]', 'MH Yee', input_data)   # Do nothing for name in pubs
         return input_data
     else:
         return input_data

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Resume - ${contact['name']}</title>
   <link rel="stylesheet" href="resume.css">
   <script src="https://kit.fontawesome.com/2194377492.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,8 @@
     <h2>Certifications</h2>
     <ul class="certification-list">
 % for entry in certifications:
-        <strong>${entry['institution']}</strong><br>
+      <li>
+        <strong>${entry['institution']}</strong><br/>
         <em>${entry['title']}</em>
       </li>
 % endfor     <li>
