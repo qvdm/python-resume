@@ -1,36 +1,35 @@
-\documentclass[12pt,letterpaper,sans]{moderncv}
-\moderncvstyle[norules]{banking}
-\moderncvcolor{blue}
-\nopagenumbers{}
+\documentclass[10pt,letterpaper,sans]{letter}  
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.85]{geometry}
-\usepackage{import}
 \usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{fontawesome5}
 \usepackage{eso-pic}
+\usepackage{charter}
+\usepackage{avant} 
+\usepackage{xcolor}
 
-
-
-\name{Quentin}{Vandermerwe}
-\address{New Westminster, BC}{}{}
-\phone[mobile]{+1 604 551 5510}
-\email{quentin@vandermerwe.com}
-
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
 \definecolor{gr}{RGB}{245,245,245}
 
-\newcommand{\mytitle}{Senior Product Manager}
-\newcommand{\theirtitle}{Hiring Manager}
-\newcommand{\greeting}{Dear Sir/Madam} 
-\newcommand{\closer}{Best Regards\\Quentin Vandermerwe}
+\newcommand{\myname}{${contact['name']}}
+\newcommand{\mytitle}{${contact['title']}}
+\newcommand{\myemail}{${contact['email']}}
+\newcommand{\mylinkedin}{${contact['linkedin']}} 
+\newcommand{\myphone}{${contact['phone']}} 
+\newcommand{\mylocation}{${contact['address']}} 
 
-\newcommand{\company}{Gitlab}
-\newcommand{\city}{Redmond} 
-\newcommand{\jobtitle}{Senior Product Manager, Compliance }
-\newcommand{\shortjobtitle}{Senior Product Manager} 
-\newcommand{\theirskills}{medical imaging systems} 
-\newcommand{\ihavetheirskills}{I spent seven years as a senior product manager for a product focused on the medical imaging market, during which time I acquired in-depth knowledge of the market, workflows, user requirements, pain points and the competitive landscape}
+\newcommand{\recipient}{${company['recipient']}} 
+\newcommand{\company}{${company['name']}} 
+\newcommand{\city}{${company['city']}} 
+\newcommand{\jobtitle}{${company['jobtitle']}} 
+\newcommand{\shortjobtitle}{${company['shorttitle']}} 
+\newcommand{\specificskills}{${company['specificskills']}} 
 
+\newcommand{\greeting}{${letter['greeting']}} 
+\newcommand{\closer}{${letter['closer']}} 
 
 
 \begin{document}
@@ -40,47 +39,62 @@
 \AtPageUpperLeft{\rule[-1.8in]{\paperwidth}{1.8in}}
 }
 
-\makecvtitle
+\begin{center}
+{\fontsize{28}{0}\selectfont\scshape \color{blue} \myname}
 
-\today
+{\fontsize{18}{0}\selectfont\scshape \mytitle}
+
+\href{mailto:\myemail}{\color{blue}\faEnvelope\enspace\color{black} \myemail}\hfill
+\href{tel:\myphone}{\color{blue}\faPhone\enspace\color{black} \myphone}\hfill
+\color{blue}\faMapMarker\enspace\color{black}  \mylocation
+\par
+\href{https://linkedin.com/in/\mylinkedin}{\color{blue}\faLinkedinIn\enspace\color{black} linkedin.com/in/\mylinkedin}\hfill
+
+\end{center}
+
+\vspace{0.2in}
+
 \begin{flushleft}
-\textbf{\theirtitle} 
-\\
-\company \\
+\today
+\end{flushleft}
+
+\begin{flushleft}
+\recipient,\\\
+\company \\\
 \city
 \end{flushleft}
 
+\vspace{-0.1in}
+
+\begin{flushleft}
+\greeting,
+\end{flushleft}
+
 \begin{center}
-\textbf{\jobtitle}
+\textbf{{\color{blue}\fontsize{16}{0}\selectfont\scshape \jobtitle}}
 \end{center}
 
-\begin{flushleft}
-\greeting
-\end{flushleft}
+\vspace{0.25in}\setlength\parindent{24pt}
+I am writing to express my strong interest in the \jobtitle \ position at \company. \ With my extensive experience in product management and my passion for driving innovation, I am confident that I would be a valuable asset to your team.
+Throughout my career, I have successfully led cross-functional teams and delivered exceptional results.  I have a proven track record of developing and launching successful products that have generated significant revenue growth.  
+
+${body['customparagraph']}
+
+As a Senior Product Manager at Bycast, Inc. I spearheaded the development of a groundbreaking object storage system that revolutionized long-term management and real-time retrieval of large sets of mission-critical data in industries as diverse as medical imaging and broadcasting.  The success of the product let to massive revenue growth and the eventual acquisition by a Forunte-500 company (NetApp).  
+
+What excites me most about the \shortjobtitle \ position at \company \ is the opportunity to apply my extensive knowledge of \specificskills \ to drive the product roadmap and success.  I am confident that my strategic mindset, strong technical and analytical skills, and ability to translate customer insights and regulations into actionable product strategies would enable me to make a significant impact at \company.
+
+I am excited about the opportunity to join your team and contribute to its continued growth and success.  I am confident that my skills and experience make me a strong fit for this role, and I am eager to bring my passion for product management to the table.  Thank you for considering my application.
+
+\vspace{0.1in}
 
 \begin{flushleft}
-I recently came across your job posting for a \jobtitle.  After reading through the requirements, 
-I believe that I am an ideal candidate for the position.  
-\end{flushleft}
-\begin{flushleft}
-The position requires in-depth knowledge of \theirskills. \ihavetheirskills.
-\end{flushleft}
-\begin{flushleft}
-As a product manager at a startup company, I successfully drove the development of a medical imaging
-related product to market success, which led to eventual acquisition by a Fortune 500 company. After the
-acquisition, I led a group of product managers to successfully integrate the product into the new company’s
-product portfolio.
-\end{flushleft}
-\begin{flushleft}
-I am very comfortable engaging with people at all levels of an organization to get a job done, and I offer
-excellent presentation- and communications skills to complement my technical skills.
-\end{flushleft}
-\begin{flushleft}
-My résumé follows for your review. I would appreciate the opportunity to meet with you to discuss the ways in which my background and expertise would assist you in accomplishing your goals.  
-\end{flushleft}
-\begin{flushleft}
-\closer
+\closer,
+
+\vspace{-0.1in}\includegraphics[width=1.5in]{signature.png}\vspace{-0.1in}
+
+\myname 
+
 \end{flushleft}
 
 \end{document}
-

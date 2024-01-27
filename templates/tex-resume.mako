@@ -16,6 +16,9 @@
 \usepackage[scale=0.85]{geometry}
 \usepackage{import}
 \usepackage{textcomp}
+\usepackage{fontawesome5}
+\usepackage{charter}
+\usepackage{avant} 
 
 \makeatletter
 \@initializecommand{\makehead}{

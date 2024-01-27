@@ -1,0 +1,24 @@
+---
+type: cover
+contact:
+  name: Quentin Vandermerwe
+  title: Senior Product Manager
+  email: quentin@vandermerwe.com
+  linkedin: quentinv
+  phone: 604.551.5510
+  address: New Westminster, BC
+company:
+  recipient: Hiring Manager
+  name: Workday
+  city: Vancouver
+  jobtitle: Senior Product Manager - Security
+  shorttitle: Senior Product Manager
+  specificskills: Machine Learning and SaaS
+letter:
+  greeting: Dear Sir/Madam
+  closer: Best Regards
+body:
+  customparagraph: In my previous role, managing an AI-based Digital
+    Lifecycle   Management component of a SaaS development product at Wind
+    River, I demonstrated the ability to bring a complex software system to
+    market in a short amount of time.

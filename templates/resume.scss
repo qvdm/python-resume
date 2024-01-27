@@ -1,0 +1,253 @@
+$font-family-raleway: "Raleway", sans-serif;
+$background-color-header: #f5f5f5;
+$background-color-body: white;
+$color-blue: #06c;
+$color-verylight-grey: #ddd;
+$color-light-grey: #bbb;
+$color-mid-grey: #888;
+$color-dark-grey: #333;
+
+
+html,
+body {
+  font-family: $font-family-raleway;
+}
+
+body {
+  box-sizing: border-box; 
+  width: 8in; // Set page width to 8 inches
+   margin: 1in auto; // 1-inch margin top and bottom, auto left and right
+  border: 1px solid black; // Solid border around the content
+  padding: 0.15in; // 1/2-inch padding between border and content
+  font-family: $font-family-raleway;
+  background-color: $background-color-body;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 12pt; /* 12pt space before the element */
+  margin-bottom: 12pt; /* 12pt space after the element */
+}
+
+.header {
+  background-color: $background-color-header;
+  padding: 0.125in;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 28pt;
+  font-weight: bold;
+  color: $color-blue;
+  margin-bottom: 0pt; 
+}
+
+.page-subtitle {
+  font-size: 28pt;
+  font-weight: bold;
+  color: $color-mid-grey;
+  margin-top: 0pt; 
+}
+
+a {
+  color: $color-dark-grey;
+}
+
+.address {
+  margin-top: 0pt; 
+  margin-bottom: 0pt; 
+}
+
+
+.fas,
+.fab {
+  color: $color-blue;
+}
+.justify {
+  text-align: justify;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  span {
+    margin: 0 10px;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  color: $color-blue;
+  font-size: 20pt;
+  line-height: 1.2; 
+  margin-topm: 24pt;
+  margin-bottom: 6pt;
+}
+
+h2::first-letter {
+  float: left; /* Float the first letter to the left */
+  font-size: 40pt; /* Make the first letter larger */
+  line-height: 0.6; /* Adjust line-height for the drop cap */
+  padding-right: 0.1em; /* Space between the drop cap and the rest of the text */
+}
+
+.custom-list-1 {
+  list-style-type: circle; /* Default hollow round bullet */
+}
+
+.custom-list-1 li {
+  margin-left: 0.15in; /* Indent list items by 0.15 inches */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.custom-list-1 li strong {
+  font-weight: bold; /* Bold for the title */
+}
+
+.experience-list {
+  /* Styles for the overall list */
+  margin-bottom: 20px;
+}
+
+.experience-entry {
+  position: relative; /* Needed for absolute positioning of the bullet */
+  margin-bottom: 15px; /* Space between each experience entry */
+  padding-left: 20px; /* Space for the bullet */
+}
+
+.experience-entry::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border: 2px solid $color-verylight-grey; 
+  border-radius: 50%;
+  background-color: $background-color-body;
+}
+
+.company-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company {
+  font-weight: bold; /* Bold for the company name */
+}
+
+.location {
+  font-weight: bold; /* Bold for the location */
+}
+
+.position-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.position-date .position,
+.position-date .date {
+  font-style: italic; /* Italics for the title and date */
+}
+
+.position-date .date {
+  text-align: right; /* Right-justify the date range */
+}
+
+.description {
+  /* Normal paragraph styles, adjust as needed */
+}
+
+.experience-items {
+  list-style-type: none; /* Remove default list styling */
+  margin-left: 0; /* Remove default margin */
+  padding-left: 20px; /* Increase indentation to align with the paragraph */
+}
+
+.experience-items li {
+  position: relative; /* Needed for positioning the custom bullet */
+  margin-bottom: 5px; /* Adjust space between list items if needed */
+  list-style: none; /* Ensuring no default list marker */
+}
+
+.experience-items li::before {
+  content: "- "; /* Dash as the list bullet */
+  position: absolute;
+  left: -20px; /* Position the dash to the left of the text */
+  top: 0;
+}
+
+.skills-section {
+  /* Styles for the skills section */
+}
+
+.skills {
+  list-style-type: circle; /* Hollow round bullet */
+  padding-left: 20px; /* Indentation for the main skills list */
+}
+
+.skills li strong {
+  font-weight: bold; /* Bold for the main skills */
+}
+
+.subskills {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 20px; /* Indentation for the subskills list */
+}
+
+.subskills li {
+  position: relative; /* Needed for positioning the custom bullet */
+  margin-bottom: 5px; /* Adjust space between subskill items if needed */
+}
+
+.subskills li::before {
+  content: "- "; /* Dash as the list bullet */
+  position: absolute;
+  left: -15px; /* Position the dash to the left of the text */
+}
+
+.education {
+  /* Styles for the education section */
+}
+
+.education-list {
+  list-style-type: circle; /* Hollow round bullet */
+  padding-left: 20px; /* Indentation for the education list */
+}
+
+.education-list li strong {
+  font-weight: bold; /* Bold for the institution name */
+}
+
+.education-list li em {
+  font-style: italic; /* Italics for the degree */
+  display: block; /* Ensure the degree appears on a new line */
+}
+
+.certification {
+  /* Styles for the education section */
+}
+
+.certification-list {
+  list-style-type: circle; /* Hollow round bullet */
+  padding-left: 20px; /* Indentation for the education list */
+}
+
+.certification-list li strong {
+  font-weight: bold; /* Bold for the institution name */
+}
+
+.certiofication-list li em {
+  font-style: italic; /* Italics for the degree */
+  display: block; /* Ensure the degree appears on a new line */
+}

@@ -1,8 +1,10 @@
 ---
+type: resume
 contact:
   name: Quentin Vandermerwe
   email: quentin@vandermerwe.com
   phone: 604.551.5510
+  linkedin: quentinv
   title: Senior Product Manager
   address: New Westminster, BC
 summary: Experienced Senior Product Manager, IT and Software Architect, Project
@@ -21,7 +23,7 @@ accomplishments:
       contracts with initial customers.
   - title: Marketing
     content: Launched a successful try-before-buy campaign for the Bravura Safe
-      security product, leading to a 100% increase in customer acquisition rate.
+      security product, leading to a 100[%] increase in customer acquisition rate.
   - title: Product development
     content: Managed the development and launch of enterprise Managed DevSecOps and
       Object Storage offerings at a managed service provider.
@@ -59,7 +61,7 @@ experience:
       - Defined market- and product requirements based on competitive analysis
         and business objectives.
       - Introduced a try-before-you-buy program to allow potential customers to
-        experience the benefits of Bravura Safe at no risk.
+        experience the benefits of Bravura Safe at no risk, increasing sale by 50[%]
       - Conducted win-loss analysis and created tactical pricing strategies to
         gain competitive advantage and market share.
   - position: Principal Cloud Architect

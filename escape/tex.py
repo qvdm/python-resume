@@ -1,7 +1,5 @@
 import re
 
-PP_TEX = '{C\\nolinebreak[4]\\hspace{-.05em}\\raisebox{.3ex}{\\relsize{-1}{\\textbf{++}}}}'
-
 def escape(input_data=''):
     if isinstance(input_data, dict):
         return {k: escape(v) for k, v in input_data.items()}
@@ -19,8 +17,6 @@ def escape(input_data=''):
         input_data = re.sub(r'\[---\]', '---', input_data)               # Em dash
         input_data = re.sub(r'\[--\]', '--', input_data)                 # En dash
         input_data = re.sub(r'\[(.*?)\]\((.*?)\)', r'\\href{\2}{\1}', input_data)   # Link handling
-        input_data = re.sub(r'\[CPP\]', PP_TEX, input_data)              # C++
-        input_data = re.sub(r'\[MH Yee\]', '\\textbf{MH Yee}', input_data) # Bold name in pubs
         return input_data
     else:
         return input_data
