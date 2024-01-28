@@ -1,19 +1,37 @@
 # Define the shell used
 SHELL = /bin/bash
 
+# Check for installed script
+ifeq ($(wildcard /usr/local/bin/pyresume.py), /usr/local/bin/pyresume.py)
+    GENERATE_CMD = /usr/local/bin/pyresume.py
+    TEMPLATES_DIR = /usr/local/etc/pyresume/templates/
+    ESC_DIR = /usr/local/etc/pyresume/esc/
+    OUTPUT_DIR = ./
+else
+    GENERATE_CMD = ./generate.py
+    TEMPLATES_DIR = ./templates/
+    ESC_DIR = ./esc/
+    OUTPUT_DIR = output/
+endif
+
 # Define the paths to python3 and pdflatex
 PYTHON = /usr/bin/python3
 PDFLATEX = /usr/bin/pdflatex
 
-# Define the output directory
-OUTPUT_DIR = output/
-
 # Phony targets for make commands
-.PHONY: all clean resume cover resume-html resume-tex resume-txt resume-pdf cover-tex cover-pdf
+.PHONY: all clean resume cover resume-html resume-tex resume-txt resume-pdf cover-tex cover-pdf rename install
 
 # Default target
-all: cover-tex cover-pdf resume-html resume-tex resume-txt resume-pdf
+all: cover-tex cover-pdf resume-html resume-tex resume-txt resume-pdf rename
 
+# Install target
+install:
+	cp generate.py /usr/local/bin/pyresume.py
+	chmod a+x /usr/local/bin/pyresume.py
+	cp -r templates /usr/local/etc/pyresume/
+	cp -r esc /usr/local/etc/pyresume/
+	
+	
 # Clean the output directory
 clean:
 	rm -rf $(OUTPUT_DIR)*
@@ -21,31 +39,30 @@ clean:
 # Resume target rules
 resume: resume-html resume-tex resume-txt resume-pdf
 
-resume-html: resume.yml templates/html-resume.mako templates/resume.scss
-	./generate.py -i resume.yml -t html
+resume-html: resume.yml $(TEMPLATES_DIR)html-resume.mako $(TEMPLATES_DIR)resume.scss
+	$(GENERATE_CMD) -i resume.yml -t html
 
-resume-tex: resume.yml templates/tex-resume.mako
-	./generate.py -i resume.yml -t tex
+resume-tex: resume.yml $(TEMPLATES_DIR)tex-resume.mako
+	$(GENERATE_CMD) -i resume.yml -t tex
 
-resume-txt: resume.yml templates/txt-resume.mako
-	./generate.py -i resume.yml -t txt
+resume-txt: resume.yml $(TEMPLATES_DIR)txt-resume.mako
+	$(GENERATE_CMD) -i resume.yml -t txt
 
-# text to pdf - sometimes needs to run twice
+# PDF target- sometimes need to run pdflatex twice
 resume-pdf: resume-tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
 
 # Cover target rules
-cover: cover-tex cover-pdf
+cover: cover-tex cover-pdf singature.png
 
-cover-tex: cover.yml templates/tex-cover.mako
-	./generate.py -i cover.yml -t tex
+cover-tex: cover.yml $(TEMPLATES_DIR)tex-cover.mako signature.png
+	$(GENERATE_CMD) -i cover.yml -t tex
 
-# text to pdf - sometimes needs to run twice
 cover-pdf: cover-tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
-
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
+	
+	
 # Rename resume/cover files
 rename:
 	@if [ -f "$(OUTPUT_DIR)resume.pdf" ]; then \
