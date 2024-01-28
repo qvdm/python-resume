@@ -5,12 +5,12 @@ SHELL = /bin/bash
 ifeq ($(wildcard /usr/local/bin/pyresume.py), /usr/local/bin/pyresume.py)
     GENERATE_CMD = /usr/local/bin/pyresume.py
     TEMPLATES_DIR = /usr/local/etc/pyresume/templates/
-    ESC_DIR = /usr/local/etc/pyresume/esc/
+    ESC_DIR = /usr/local/etc/pyresume/escape/
     OUTPUT_DIR = ./
 else
     GENERATE_CMD = ./generate.py
     TEMPLATES_DIR = ./templates/
-    ESC_DIR = ./esc/
+    ESC_DIR = ./escape/
     OUTPUT_DIR = output/
 endif
 
@@ -26,10 +26,13 @@ all: cover-tex cover-pdf resume-html resume-tex resume-txt resume-pdf rename
 
 # Install target
 install:
-	cp generate.py /usr/local/bin/pyresume.py
-	chmod a+x /usr/local/bin/pyresume.py
-	cp -r templates /usr/local/etc/pyresume/
-	cp -r esc /usr/local/etc/pyresume/
+	sudo cp generate.py /usr/local/bin/pyresume.py
+	sudo chmod a+x /usr/local/bin/pyresume.py
+	sudo mkdir -p  ${TEMPLATES_DIR}
+	sudo mkdir -p  ${ESC_DIR}
+	sudo cp  templates/* $(TEMPLATES_DIR)
+	rm -rf ./escape/__pycache__
+	sudo cp  escape/* $(ESC_DIR)
 	
 	
 # Clean the output directory
@@ -50,8 +53,8 @@ resume-txt: resume.yml $(TEMPLATES_DIR)txt-resume.mako
 
 # PDF target- sometimes need to run pdflatex twice
 resume-pdf: resume-tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
 
 # Cover target rules
 cover: cover-tex cover-pdf singature.png
@@ -60,8 +63,9 @@ cover-tex: cover.yml $(TEMPLATES_DIR)tex-cover.mako signature.png
 	$(GENERATE_CMD) -i cover.yml -t tex
 
 cover-pdf: cover-tex
-	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)*.tex
-	
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
+
+pdf: cover-pdf resume-pdf	
 	
 # Rename resume/cover files
 rename:
