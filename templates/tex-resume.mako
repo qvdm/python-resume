@@ -25,6 +25,8 @@
 \usepackage{xcolor}
 
 \renewcommand*{\titlefont}{\fontsize{22}{80}\mdseries\upshape}
+\setlength{\footskip}{14.5pt}
+
 
 \makeatletter
 \@initializecommand{\makehead}{
