@@ -37,7 +37,19 @@ install:
 	
 # Clean the output directory
 clean:
-	rm -rf $(OUTPUT_DIR)*
+	rm -f $(OUTPUT_DIR)*.pdf
+	rm -f $(OUTPUT_DIR)*.tex
+	rm -f $(OUTPUT_DIR)*.html
+	rm -f $(OUTPUT_DIR)*.txt
+	rm -f $(OUTPUT_DIR)*.css
+	rm -f $(OUTPUT_DIR)*.aux
+	rm -f $(OUTPUT_DIR)*.out
+	rm -f $(OUTPUT_DIR)*.log
+	 
+	 
+	
+	
+	
 
 # Resume target rules
 resume: resume-html resume-tex resume-txt resume-pdf
