@@ -43,7 +43,7 @@ should do it
 
 *resume|cover.yml* is the YAML source for the resume and cover letter
 
-*signature.pdf" is an image of your signature for the cover letter
+*signature.pdf* is an image of your signature for the cover letter
 
 The *templates* directory contains the mako templates for transforming the
 YAML to output.  It also contains the SCCS source for HTML output
