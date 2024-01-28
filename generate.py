@@ -8,11 +8,6 @@ from mako.template import Template
 from mako import exceptions
 import sass
 
-
-
-
-    
-    
     
 # Set up command line argument parsing
 parser = argparse.ArgumentParser(description="Generate documents using Mako templates.")

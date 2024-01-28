@@ -13,12 +13,18 @@
 \moderncvstyle[norules]{banking}
 \moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
 \usepackage[scale=0.85]{geometry}
 \usepackage{import}
 \usepackage{textcomp}
+\usepackage{graphicx}
 \usepackage{fontawesome5}
+\usepackage{eso-pic}
 \usepackage{charter}
 \usepackage{avant} 
+\usepackage{xcolor}
+
+\renewcommand*{\titlefont}{\fontsize{22}{80}\mdseries\upshape}
 
 \makeatletter
 \@initializecommand{\makehead}{
@@ -27,7 +33,7 @@
   \parbox{\makeheaddetailswidth}{
     \centering
     \namestyle{\@firstname~\@lastname}\linebreak
-    \vskip-1.5ex
+    \vskip-0.5ex
     \ifthenelse{\equal{\@title}{}}{}{\titlestyle{\@title}}\linebreak
     \if@details{
       \\
@@ -55,6 +61,7 @@
 \address{${address}}{}{}
 
 \begin{document}
+
 \makecvtitle
 
 \small{${summary}}

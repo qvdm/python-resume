@@ -10,9 +10,11 @@
 \usepackage{avant} 
 \usepackage{xcolor}
 
-\addtolength{\topmargin}{-0.5in}
+\addtolength{\topmargin}{-0.7in}
 \addtolength{\textheight}{1.0in}
 \definecolor{gr}{RGB}{245,245,245}
+\definecolor{tblue}{RGB}{0,102,204}
+\definecolor{tgrey}{RGB}{128,128,128}
 
 \newcommand{\myname}{${contact['name']}}
 \newcommand{\mytitle}{${contact['title']}}
@@ -40,15 +42,16 @@
 }
 
 \begin{center}
-{\fontsize{28}{0}\selectfont\scshape \color{blue} \myname}
+{\fontsize{32}{0}\selectfont\scshape \color{tblue} \textbf{\myname}}
 
-{\fontsize{18}{0}\selectfont\scshape \mytitle}
+{\fontsize{24}{0}\selectfont\scshape \color{tgrey} \textbf{\mytitle}}
 
-\href{mailto:\myemail}{\color{blue}\faEnvelope\enspace\color{black} \myemail}\hfill
-\href{tel:\myphone}{\color{blue}\faPhone\enspace\color{black} \myphone}\hfill
-\color{blue}\faMapMarker\enspace\color{black}  \mylocation
+{\fontsize{12}{0}\selectfont\scshape \mylocation}
+
 \par
-\href{https://linkedin.com/in/\mylinkedin}{\color{blue}\faLinkedinIn\enspace\color{black} linkedin.com/in/\mylinkedin}\hfill
+\href{mailto:\myemail}{\color{tblue}\faEnvelope\enspace\color{black} \myemail}\hfill
+\href{tel:\myphone}{\color{tblue}\faPhone\enspace\color{black} \myphone}\hfill
+\href{https://linkedin.com/in/\mylinkedin}{\color{tblue}\faLinkedinIn\enspace\color{black} linkedin.com/in/\mylinkedin}\hfill
 
 \end{center}
 
@@ -71,7 +74,7 @@
 \end{flushleft}
 
 \begin{center}
-\textbf{{\color{blue}\fontsize{16}{0}\selectfont\scshape \jobtitle}}
+\textbf{{\color{tblue}\fontsize{16}{0}\selectfont\scshape \jobtitle}}
 \end{center}
 
 \vspace{0.25in}\setlength\parindent{24pt}
