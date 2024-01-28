@@ -12,11 +12,11 @@ generate the PDF output.
 - Python 3
 - pdflatex, via texlive-full
 
-'''
+```
 sudo apt install texlive-full 
 
 pip install -r requirements.txt
-'''
+```
 
 should do it
 
