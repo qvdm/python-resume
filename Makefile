@@ -22,27 +22,31 @@ clean:
 resume: resume-html resume-tex resume-txt resume-pdf
 
 resume-html: resume.yml templates/html-resume.mako templates/resume.scss
-	$(PYTHON) ./generate.py -i resume.yml -t html
+	./generate.py -i resume.yml -t html
 
 resume-tex: resume.yml templates/tex-resume.mako
-	$(PYTHON) ./generate.py -i resume.yml -t tex
+	./generate.py -i resume.yml -t tex
 
 resume-txt: resume.yml templates/txt-resume.mako
-	$(PYTHON) ./generate.py -i resume.yml -t txt
+	./generate.py -i resume.yml -t txt
 
+# text to pdf - sometimes needs to run twice
 resume-pdf: resume-tex
+	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
 
 # Cover target rules
 cover: cover-tex cover-pdf
 
 cover-tex: cover.yml templates/tex-cover.mako
-	$(PYTHON) ./generate.py -i cover.yml -t tex
+	./generate.py -i cover.yml -t tex
 
+# text to pdf - sometimes needs to run twice
 cover-pdf: cover-tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
 
+# Rename resume/cover files
 rename:
 	@if [ -f "$(OUTPUT_DIR)resume.pdf" ]; then \
 		name=$$($(PYTHON) -c "import yaml; print(yaml.safe_load(open('resume.yml'))['contact']['name'].replace(' ', '_'))"); \

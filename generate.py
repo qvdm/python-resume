@@ -69,7 +69,6 @@ try:
         
     print(f"Created {output_file}")
 except:
-    print("*****")
     print(exceptions.text_error_template().render())
 
 
