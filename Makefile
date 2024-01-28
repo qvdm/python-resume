@@ -42,3 +42,13 @@ cover-tex: cover.yml templates/tex-cover.mako
 cover-pdf: cover-tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
+
+rename:
+	@if [ -f "$(OUTPUT_DIR)resume.pdf" ]; then \
+		name=$$($(PYTHON) -c "import yaml; print(yaml.safe_load(open('resume.yml'))['contact']['name'].replace(' ', '_'))"); \
+		mv "$(OUTPUT_DIR)resume.pdf" "$(OUTPUT_DIR)Resume_$$name.pdf"; \
+	fi
+	@if [ -f "$(OUTPUT_DIR)cover.pdf" ]; then \
+		name=$$($(PYTHON) -c "import yaml; print(yaml.safe_load(open('cover.yml'))['contact']['name'].replace(' ', '_'))"); \
+		mv "$(OUTPUT_DIR)cover.pdf" "$(OUTPUT_DIR)Cover_$$name.pdf"; \
+	fi

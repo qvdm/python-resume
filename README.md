@@ -61,3 +61,5 @@ Run *make*
 
 You can also run a subset, like *make resume* or *make resume-html*
 
+Use *make rename* after running *make*, to renamme the output files, using
+your name, extracted from the YAML file. 
