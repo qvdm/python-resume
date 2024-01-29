@@ -35,20 +35,19 @@ install:
 	sudo cp  escape/* $(ESC_DIR)
 	
 	
-# Clean the output directory
-clean:
-	rm -f $(OUTPUT_DIR)*.pdf
+# Tidy the output directory
+tidy:
 	rm -f $(OUTPUT_DIR)*.tex
-	rm -f $(OUTPUT_DIR)*.html
-	rm -f $(OUTPUT_DIR)*.txt
-	rm -f $(OUTPUT_DIR)*.css
 	rm -f $(OUTPUT_DIR)*.aux
 	rm -f $(OUTPUT_DIR)*.out
 	rm -f $(OUTPUT_DIR)*.log
 	 
-	 
-	
-	
+# Clean the output directory
+clean: tidy
+	rm -f $(OUTPUT_DIR)*.pdf
+	rm -f $(OUTPUT_DIR)*.html
+	rm -f $(OUTPUT_DIR)*.txt
+	rm -f $(OUTPUT_DIR)*.css
 	
 
 # Resume target rules
