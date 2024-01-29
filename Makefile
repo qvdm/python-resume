@@ -30,9 +30,9 @@ install:
 	sudo chmod a+x /usr/local/bin/pyresume.py
 	sudo mkdir -p  ${TEMPLATES_DIR}
 	sudo mkdir -p  ${ESC_DIR}
-	sudo cp  templates/* $(TEMPLATES_DIR)
+	sudo cp  templates/* /usr/local/etc/pyresume/templates/
 	rm -rf ./escape/__pycache__
-	sudo cp  escape/* $(ESC_DIR)
+	sudo cp  escape/* /usr/local/etc/pyresume/escape/
 	
 	
 # Tidy the output directory
