@@ -1,20 +1,18 @@
 ${contact['name']}
-{${contact['title']}
+${contact['title']}
 ${contact['email']}
-${contact['linkedin']}
 ${contact['phone']}
 ${contact['address']}
 
 ${company['recipient']}
-$company['name']}
+${company['name']}
 ${company['city']}
 
 ${letter['greeting']}
 
 ${company['jobtitle']}
 
-I am writing to express my strong interest in the ${company['jobtitle']}  position at $company['name']}.  With my extensive experience in product management and my passion for driving innovation, I am confident that I would be a valuable asset to your team.
-Throughout my career, I have successfully led cross-functional teams and delivered exceptional results.  I have a proven track record of developing and launching successful products that have generated significant revenue growth.  
+I am writing to express my strong interest in the ${company['jobtitle']}  position at ${company['name']}.  With my extensive experience in product management and my passion for driving innovation, I am confident that I would be a valuable asset to your team.  Throughout my career, I have successfully led cross-functional teams and delivered exceptional results.  I have a proven track record of developing and launching successful products that have generated significant revenue growth.  
 
 ${body['customparagraph']}
 

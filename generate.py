@@ -9,7 +9,6 @@ from mako.template import Template
 from mako import exceptions
 import sass
 
-print('aaaa\n', flush=True)
 
 # Set up command line argument parsing
 parser = argparse.ArgumentParser(description="Generate documents using Mako templates.")
@@ -38,12 +37,10 @@ if installed :
     escape_defn = os.path.join('/usr/local/etc/pyresume', 'escape', f"{args.template}.py")
     template_dir=os.path.join('/usr/local/etc/pyresume', 'templates')
     template_file = os.path.join(template_dir, f'{args.template}-{type}.mako')
-#    print(f"Installed: ESC={escape_defn} TF={template_file}\n", flush=True)
 else:
     escape_defn = os.path.join(os.path.dirname(__file__), 'escape', f"{args.template}.py")
     template_dir = os.path.join(os.path.dirname(__file__), 'templates')
     template_file = os.path.join(template_dir, f'{args.template}-{type}.mako')
-#    print(f"Local: ESC={escape_defn} TF={template_file}\n", flush=True)
 
 
 # Check if the escape definition file exists and import it if it does
@@ -58,8 +55,7 @@ if os.path.exists(escape_defn):
 
 # Check if the template file exists
 if not os.path.exists(template_file):
-#    raise FileNotFoundError(f"Error: template for {args.template} does not exist. Use -t or --template to specify another template file.")
-    print(f"Error: template for {args.template} does not exist. Use -t or --template to specify another template file.")
+    raise FileNotFoundError(f"Error: template for {args.template} does not exist. Use -t or --template to specify another template file.")
     exit()
 
 input_basename, _ = os.path.splitext(args.input)
