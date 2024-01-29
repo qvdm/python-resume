@@ -22,7 +22,7 @@ PDFLATEX = /usr/bin/pdflatex
 .PHONY: all clean resume cover resume-html resume-tex resume-txt resume-pdf cover-tex cover-pdf rename install
 
 # Default target
-all: cover-tex cover-pdf resume-html resume-tex resume-txt resume-pdf rename
+all: cover-tex cover-pdf resume-html resume-tex resume-txt resume-pdf rename 
 
 # Install target
 install:
@@ -68,10 +68,13 @@ resume-pdf: resume-tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)resume.tex
 
 # Cover target rules
-cover: cover-tex cover-pdf singature.png
+cover: cover-tex cover-txt cover-pdf singature.png
 
 cover-tex: cover.yml $(TEMPLATES_DIR)tex-cover.mako signature.png
 	$(GENERATE_CMD) -i cover.yml -t tex
+
+cover-txt: cover.yml $(TEMPLATES_DIR)txt-cover.mako
+	$(GENERATE_CMD) -i cover.yml -t txt
 
 cover-pdf: cover-tex
 	$(PDFLATEX) -output-directory=$(OUTPUT_DIR) $(OUTPUT_DIR)cover.tex
