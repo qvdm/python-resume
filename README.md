@@ -14,11 +14,44 @@ generate the PDF output.
 
 ```
 sudo apt install texlive-full 
-
-pip install -r requirements.txt
 ```
 
 should do it
+
+## Quick Start
+
+```
+git clone https://github.com/qvdm/python-resume.git
+
+cd python-resume
+
+pip install -r requirements.txt
+
+make install
+```
+
+Next, create a new project directory for each job application.  Copy the files below to the new directory:
+
+```
+resume.yml
+cover.yml
+Makefile
+```
+
+You will also need to scan a copy pf your signature and save it as *signature.png* in the project directory. 
+
+You can now edit *resume.yml* and *cover.yml*, adding your details, work experience, skills, etc. 
+
+Once the yaml files are filled in, run:
+
+```
+make & make tidy
+```
+
+This should result in a cover letter in pdf and text format in the current directory, as 
+well as a resume in pdf, html and text format.  
+
+The pdf versions of the cover letter and resume are named according to the name you entered in resume.yml
 
 
 ## Project Structure
@@ -43,7 +76,7 @@ should do it
 
 *resume|cover.yml* is the YAML source for the resume and cover letter
 
-*signature.pdf* is an image of your signature for the cover letter
+*signature.png* is an image of your signature for the cover letter
 
 The *templates* directory contains the mako templates for transforming the
 YAML to output.  It also contains the SCCS source for HTML output
@@ -52,29 +85,17 @@ The *escape* directory contains the escape sequence filters
 
 All output is writtent to the *output* directory
 
-
-## Building a resume
-
-Add your details to *resume.yml* and *cover.yml*
-
-Run *make*
-
-You can also run a subset, like *make resume* or *make resume-html*
-
-Use *make rename* after running *make*, to renamme the output files, using
-your name, extracted from the YAML file.
-
-## Renaming the output pdfs to use your name as title
-
-Run *make rename* 
-
 ## Installing
 
-Run *make install*
+If you run *make install*, the generator and templates are installed in */usr/local*, and subsequently you 
+can copy *resume|cover.yml*, *singature.png* and *Makefile* to an individual project directory, customize it there
+and then run *make*.  This will create output directly in your project directory.  
 
-After installation, you can create any directory containing *resume.yml*,
-*cover.yml* and *signature.png* and run *make*.  Output will be in the same
-directory
+
+## Building a resume - more targets
+
+You can always create a subset of the output.  Run *make resume* or *make resume-html*, etc.
+
 
 
 
