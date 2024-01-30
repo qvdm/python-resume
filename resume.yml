@@ -13,7 +13,7 @@ summary: Experienced Senior Product Manager, IT and Software Architect, Project
   architecture, storage, embedded software development and people management.
 accomplishments:
   - title: Product management leadership
-    content: Guided the product development at a startup, growing the customer base
+    content: Guided product development at a startup, growing the customer base
       from one enterprise customer to over 100, leading to acquisition by a
       Fortune 500 company (NetApp).
   - title: Go-to-market
@@ -23,7 +23,7 @@ accomplishments:
       contracts with initial customers.
   - title: Marketing
     content: Launched a successful try-before-buy campaign for the Bravura Safe
-      security product, leading to a 100[%] increase in customer acquisition rate.
+      security product, leading to a 50[%] increase in customer acquisition rate.
   - title: Product development
     content: Managed the development and launch of enterprise Managed DevSecOps and
       Object Storage offerings at a managed service provider.
@@ -38,9 +38,11 @@ experience:
       Mars to playing a key role in the world’s first successful 5G data
       session. Wind River technology is found in billions of products worldwide.
     responsibilities:
-      - Owner of product management for the Digital Lifecycle Management (DLM)
-        and Over the Air (OTA) update components of the Wind River Studio
-        development platform.
+      -  Owner of product management for the AI based Digital Lifecycle 
+        Management (DLM) component and the Over the Air (OTA) update component of 
+        the Wind River Studio development platform. Wind River Studio is an enterprise 
+        class SaaS software product aimed at enabling end to end IoT and embedded 
+        firmware development and device lifecycle management.
       - Created the DFL and OTA product development roadmap to position Wind
         River Studio as a world-class development platform.
       - Defined market- and product requirements based on competitive analysis
@@ -61,7 +63,7 @@ experience:
       - Defined market- and product requirements based on competitive analysis
         and business objectives.
       - Introduced a try-before-you-buy program to allow potential customers to
-        experience the benefits of Bravura Safe at no risk, increasing sale by 50[%]
+        experience the benefits of Bravura Safe at no risk, increasing sales by 50[%]
       - Conducted win-loss analysis and created tactical pricing strategies to
         gain competitive advantage and market share.
   - position: Principal Cloud Architect
@@ -104,8 +106,9 @@ experience:
     responsibilities:
       - Guided technology start-ups to establish sound agile product development
         and product management frameworks and processes.
-      - "Designed and documented lightweight, scalable, repeatable processes for
-        all aspects of the development process, including:"
+      - Designed and documented lightweight, scalable, repeatable processes for
+        all aspects of the development process, including requirements management,
+        document management and product release. 
   - position: Senior Product Manager
     employer: NetApp / Bycast
     location: Vancouver / Sunnyvale
@@ -163,43 +166,42 @@ skills:
       - Risk Management and contingency planning.
       - Subcontractor management.
       - Negotiation with customers and suppliers.
+      - Agile project- and knowledge managemment tools, including JIRA and Confluence.
   - category: Software Architecture and Technology
     list:
+      - Machine learning and classification
       - Virtualization, including VMware, Hyper-V, and KVM
+      - API design and management
       - Cloud infrastructure and customer solution implementation on Azure, GCP,
         and AWS
       - Containerized application architecture with Kubernetes and Docker
       - Automated infrastructure deployment with Ansible, Salt, Metalsoft, and
         similar frameworks
       - Large scale, distributed systems design.
+      - IOT systems
       - Fault-tolerant and highly available systems.
       - Medical imaging systems.
       - Security
       - Identity and Access Management
       - Storage Systems.
       - Software development in C++, C, Java, and Python.
-      - Writing functional, interface, and architecture specifications.
   - category: Development Process
     list:
       - Implementing and managing agile development frameworks (Scrum and
         Kanban). Proficient as scrum master and product owner.
       - Software requirements, configuration, and change management.
-  - category: Other
-    list:
-      - Mathematical modeling of electromechanical systems.
-      - Control Systems Design
 degrees:
   - title: B.Eng (Electronics and Computer Engineering)
-    institution: University of Pretoria, Pretoria, South Africa
+    institution: University of Pretoria
     date: 1983 [--] 1986
 certifications:
+  - title: Machine Learning by Andrew Ng
+    institution: Stanford University
   - title: Microsoft Azure Administrator Associate
     institution: Microsoft
   - title: Certificate in IT Service Management
     institution: ITIL Foundation
   - title: Principles of Pragmatic Marketing
     institution: Pragmatic Institute
-  - title: Machine Learning by Andrew Ng
-    institution: Stanford University
     
 

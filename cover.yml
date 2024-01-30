@@ -9,16 +9,16 @@ contact:
   address: New Westminster, BC
 company:
   recipient: Hiring Manager
-  name: Workday
-  city: Vancouver
-  jobtitle: Senior Product Manager - Security
-  shorttitle: Senior Product Manager
-  specificskills: Machine Learning and SaaS
+  name: Aha!
+  city: Menlo Park, CA
+  jobtitle: Senior Product Success Manager 
+  shorttitle: Product Success Manager
+  specificskills: Saas and customer relations
 letter:
   greeting: Dear Sir/Madam
   closer: Best Regards
 body:
   customparagraph: In my previous role, managing an AI-based Digital
     Lifecycle   Management component of a SaaS development product at Wind
-    River, I demonstrated the ability to bring a complex software system to
+    River, I demonstrated the ability to bring a complex product to
     market in a short amount of time.
