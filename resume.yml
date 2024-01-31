@@ -72,11 +72,11 @@ experience:
     date: Jan 2015 - Apr 2022
     profile: Aptum is a global provider of managed hosting services.
     responsibilities:
-      - Lead the product planning, specification, and high-level design of the
+      - Led the product planning, specification, and high-level design of the
         Aptum regional hybrid cloud infrastructure project. This initiative
         added a world-class self-service regional cloud platform and hybrid
         cloud management portal to Aptum's product portfolio.
-      - Lead the DevOps planning and implementation of Aptum's Azure Expert MSP
+      - Led the DevOps planning and implementation of Aptum's Azure Expert MSP
         certification effort.
       - Successfully managed the development of, and delivered, Aptum's Managed
         DevOps product. Defined the business case, product development plan and
@@ -175,14 +175,14 @@ skills:
       - Cloud infrastructure and customer solution implementation on Azure, GCP,
         and AWS
       - Containerized application architecture with Kubernetes and Docker
-      - Automated infrastructure deployment with Ansible, Salt, Metalsoft, and
+      - DevOps and Automated infrastructure deployment with Ansible, Salt, Metalsoft, and
         similar frameworks
       - Large scale, distributed systems design.
       - IOT systems
       - Fault-tolerant and highly available systems.
+      - Networking
       - Medical imaging systems.
-      - Security
-      - Identity and Access Management
+      - Security, Identity and Access Management
       - Storage Systems.
       - Software development in C++, C, Java, and Python.
   - category: Development Process
