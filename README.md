@@ -58,9 +58,10 @@ The pdf versions of the cover letter and resume are named according to the name 
 
 ```
 .
-├── escape
-├── templates
-├── output
+├── escape/
+├── templates/
+├── output/
+├── favicon/
 ├── requirements.txt
 ├── generator.py
 ├── Makefile
@@ -84,6 +85,10 @@ YAML to output.  It also contains the SCCS source for HTML output
 The *escape* directory contains the escape sequence filters
 
 All output is writtent to the *output* directory
+
+The *favicon* directory is not strictly part of the generator, it is
+specific to the author's site and the content should be replaced with your
+own.  
 
 ## Installing
 
