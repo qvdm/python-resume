@@ -20,7 +20,7 @@
     <p class=address>${contact['address']}</p><br/>
     <div class="contact-info">
       <span><i class="fas fa-phone"></i> ${contact['phone']}</span>
-      <span><i class="fas fa-envelope"></i> <a href="mailto:${contact['email']}">"${contact['email']}</a></span>
+      <span><i class="fas fa-envelope"></i> <a href="mailto:${contact['email']}">${contact['email']}</a></span>
       <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/${contact['linkedin']}">linkedin.com/in/${contact['linkedin']}</a></span>
     </div>
   </header>
