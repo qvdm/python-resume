@@ -16,6 +16,7 @@ def escape(input_data=''):
         input_data = re.sub(r'\[%\]', '\\\\%', input_data)               # Percent sign
         input_data = re.sub(r'\[---\]', '---', input_data)               # Em dash
         input_data = re.sub(r'\[--\]', '--', input_data)                 # En dash
+        input_data = re.sub(r'\[P\]', '\n\\\\par\n\\\\vspace{6pt}\n', input_data)           # paragraph
         input_data = re.sub(r'\[(.*?)\]\((.*?)\)', r'\\href{\2}{\1}', input_data)   # Link handling
         return input_data
     else:

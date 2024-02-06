@@ -7,17 +7,17 @@ contact:
   linkedin: quentinv
   title: Senior Product Manager
   address: New Westminster, BC
-summary: Experienced Senior Product Manager, IT and Software Architect, Project
-  Manager and Product Strategist with expertise in product management,
-  hyper-scale cloud architecture, data center architecture, enterprise
-  architecture, storage, embedded software development and people management.
+summary: Experienced Senior Product Manager with extensive SaaS and Enterprise product experience. [P]
+  IT and Software Architect, Project Manager and Product Strategist with expertise in hyper-scale cloud 
+  architecture, data centre architecture, enterprise architecture, storage, embedded software development 
+  and people management.
 accomplishments:
   - title: Product management leadership
     content: Guided product development at a startup, growing the customer base
-      from one enterprise customer to over 100, leading to acquisition by a
+      from one enterprise customer to over 100, within 3 years, leading to acquisition by a
       Fortune 500 company (NetApp).
   - title: Go-to-market
-    content: Drove the completion of the Digital Feedback Loop and Over the Air
+    content: Drove the completion and successful launch of the Digital Feedback Loop and Over the Air
       components of the Wind River Studio SaaS product. Demonstrated and
       evangelized the product, leading to the signing of multi-million-dollar
       contracts with initial customers.
@@ -26,9 +26,9 @@ accomplishments:
       security product, leading to a 50[%] increase in customer acquisition rate.
   - title: Product development
     content: Managed the development and launch of enterprise Managed DevSecOps and
-      Object Storage offerings at a managed service provider.
+      Object Storage offerings at Aptum, a managed service provider.
 experience:
-  - position: Product Line Manager - DevSecOps
+  - position: Product Line Manager (DevSecOps)
     employer: Wind River Systems
     location: Ottawa-Remote
     date: Jan 2023 - Dec 2023
@@ -38,7 +38,7 @@ experience:
       Mars to playing a key role in the world’s first successful 5G data
       session. Wind River technology is found in billions of products worldwide.
     responsibilities:
-      -  Owner of product management for the AI based Digital Lifecycle 
+      -  Owner of product management for the Digital Lifecycle 
         Management (DLM) component and the Over the Air (OTA) update component of 
         the Wind River Studio development platform. Wind River Studio is an enterprise 
         class SaaS software product aimed at enabling end to end IoT and embedded 
@@ -47,8 +47,8 @@ experience:
         River Studio as a world-class development platform.
       - Defined market- and product requirements based on competitive analysis
         and business objectives.
-      - Oversaw deployment of the DFL and OTA components at the first major
-        Studio customer, a household word in the automotive industry.
+      - Successfully launched the DFL and OTA components of Wind River Studio commercially 
+        within six months of joining the company.
   - position: Senior Product Manager
     employer: Bravura Security (formerly Hitachi ID Systems)
     location: Calgary-Remote
@@ -181,6 +181,7 @@ skills:
       - IOT systems
       - Fault-tolerant and highly available systems.
       - Networking
+      - SQL
       - Medical imaging systems.
       - Security, Identity and Access Management
       - Storage Systems.
